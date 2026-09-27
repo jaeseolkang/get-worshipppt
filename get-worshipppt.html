@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>예배PPT 체험판 받기</title>
+<title>worshipPPT 프로그램 받기</title>
 <style>
   :root {
     --bg: #f5f3ee;
@@ -86,18 +86,18 @@
   <div class="card">
     <div class="form-view" id="formView">
       <div class="icon">🎬</div>
-      <h1>예배PPT 프로그램 (체험판) 받기</h1>
+      <h1>worshipPPT 프로그램 받기</h1>
       <p class="desc">이메일 주소를 남겨주시면<br>바로 다운로드 링크를 보여드립니다.</p>
       <form id="requestForm">
         <input type="email" id="emailInput" placeholder="이메일 주소" required>
-        <button type="submit" id="submitBtn">체험판 받기를 원합니다</button>
+        <button type="submit" id="submitBtn">worshipPPT 받기를 원합니다</button>
       </form>
       <div class="msg" id="msg"></div>
     </div>
     <div class="success-view" id="successView">
       <div class="icon">✅</div>
       <h1>신청 완료!</h1>
-      <p class="desc">아래 버튼을 눌러<br>체험판을 다운로드하세요.</p>
+      <p class="desc">아래 버튼을 눌러<br>worshipPPT를 다운로드하세요.</p>
       <a class="dl-link" id="downloadLink" href="https://drive.google.com/drive/folders/1zXBlmnw7pmfKPn1aBcl02uxTrfiww7K8?usp=drive_link" target="_blank" rel="noopener">다운로드 폴더 열기</a>
     </div>
   </div>
@@ -131,7 +131,7 @@
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: email,
-          _subject: '예배PPT 체험판 다운로드 요청'
+          _subject: 'worshipPPT 다운로드 요청'
         })
       });
 
@@ -145,7 +145,7 @@
       msg.textContent = '전송에 실패했어요. 잠시 후 다시 시도해주세요.';
       msg.className = 'msg error';
       submitBtn.disabled = false;
-      submitBtn.textContent = '체험판 받기를 원합니다';
+      submitBtn.textContent = 'worshipPPT 받기를 원합니다';
     }
   });
 </script>
